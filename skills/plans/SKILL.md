@@ -1,6 +1,6 @@
 ---
 name: plans
-description: Router skill that orchestrates plan-related workflows by delegating to focused sub-skills. Use this skill when the user wants to work with implementation plans — whether creating, analyzing, reviewing, or updating them. This skill detects user intent and delegates to the appropriate sub-skill (plan-creator, plan-reviewer, or plan-updater). Always triggers when user mentions planning-related requests in any language.
+description: Router skill that orchestrates plan-related workflows by delegating to focused sub-skills. Use this skill when the user wants to work with implementation plans — whether creating, analyzing, reviewing, updating, or explaining them. This skill detects user intent and delegates to the appropriate sub-skill (plan-creator, plan-reviewer, plan-updater, or plan-explainer). Always triggers when user mentions planning-related requests in any language.
 ---
 
 # Plans Skill
@@ -18,6 +18,7 @@ The sub-skills handle specific concerns:
 - **plan-creator** — Create new implementation plans from scratch
 - **plan-reviewer** — Analyze, critique, and suggest improvements to existing plans
 - **plan-updater** — Update and refine existing plans based on feedback
+- **plan-explainer** — Explain plan structure and help users understand plans
 
 ## When to Trigger
 
@@ -27,6 +28,7 @@ The sub-skills handle specific concerns:
 - "Update the plan", "modify the plan", "revise the plan"
 - "Suggest improvements to this plan"
 - "What do you think of this plan?"
+- "Explain this plan", "what does this mean?", "giải thích plan"
 
 ## Intent Detection
 
@@ -45,6 +47,11 @@ The sub-skills handle specific concerns:
 
 **→ Delegate to plan-updater skill**
 
+### Explain/Understand Existing Plan
+**Keywords:** explain plan, what does this mean, giải thích plan, hiểu plan, what's in this plan, help me understand this
+
+**→ Delegate to plan-explainer skill**
+
 ## Workflow
 
 ### Step 1: Identify Intent
@@ -53,6 +60,7 @@ Quickly determine what the user wants:
 - Create new plan? → plan-creator
 - Analyze existing plan? → plan-reviewer
 - Update existing plan? → plan-updater
+- Understand/explain a plan? → plan-explainer
 
 ### Step 2: Delegate
 
