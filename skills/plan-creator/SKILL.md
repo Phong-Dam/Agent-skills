@@ -1,6 +1,6 @@
 ---
 name: plan-creator
-description: Create detailed implementation plans as structured artifacts, then STOP and wait for approval before any execution. Use this skill whenever the user asks to "create a plan", "write a plan", "make a plan", "lập kế hoạch", "tạo kế hoạch", "plan this out", or "think through the implementation". This skill is especially valuable for complex multi-step tasks involving architectural changes, multiple file modifications, research requirements, or unclear requirements. CRITICAL: Always create the plan as an artifact and WAIT for explicit approval — never auto-execute.
+description: Create detailed implementation plans as structured artifacts, then STOP and wait for approval before any execution. Use this skill whenever the user asks to "create a plan", "write a plan", "make a plan", "lập kế hoạch", "tạo kế hoạch", "plan this out", or "think through the implementation". This skill is especially valuable for complex multi-step tasks involving architectural changes, multiple file modifications, research requirements, or unclear requirements. CRITICAL Always create the plan as an artifact and WAIT for explicit approval — never auto-execute.
 ---
 
 # Plan Creator
